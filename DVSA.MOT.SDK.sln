@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVSA.MOT.SDK", "DVSA.MOT.SDK\DVSA.MOT.SDK.csproj", "{EA4F72E9-20B9-4757-A4AC-5B993B910BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DVSA.MOT.SDK", "DVSA.MOT.SDK\DVSA.MOT.SDK.csproj", "{EA4F72E9-20B9-4757-A4AC-5B993B910BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVSA.TEST.WEB.API", "DVSA.TEST.WEB.API\DVSA.TEST.WEB.API.csproj", "{3EBEF4E6-B540-44FE-A428-6BF266B7C45A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EA4F72E9-20B9-4757-A4AC-5B993B910BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA4F72E9-20B9-4757-A4AC-5B993B910BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA4F72E9-20B9-4757-A4AC-5B993B910BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBEF4E6-B540-44FE-A428-6BF266B7C45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBEF4E6-B540-44FE-A428-6BF266B7C45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBEF4E6-B540-44FE-A428-6BF266B7C45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBEF4E6-B540-44FE-A428-6BF266B7C45A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
