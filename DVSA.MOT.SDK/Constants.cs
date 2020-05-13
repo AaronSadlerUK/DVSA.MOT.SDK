@@ -1,4 +1,6 @@
-﻿namespace DVSA.MOT.SDK
+﻿using System.Net;
+
+namespace DVSA.MOT.SDK
 {
     public static class Constants
     {
@@ -6,6 +8,14 @@
         public static string ApiPath => "trade/vehicles/mot-tests";
         public static string ApiAcceptHeader => "application/json+v6";
         public static string ApiKeyHeader => "x-api-key";
+
+        public static class Parameters
+        {
+            public static string Registration => "registration";
+            public static string VehicleId => "vehicleId";
+            public static string Page => "page";
+            public static string Date => "date";
+        }
 
         public static class LanguageStrings
         {
