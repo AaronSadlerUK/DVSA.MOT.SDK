@@ -29,6 +29,7 @@ namespace DVSA.MOT.SDK
             public static class SingleVehicleMotHistory
             {
                 public static string NullRegistrationException => "The registration number is missing";
+                public static string NullVehicleIdException => "The vehicle id is missing";
                 public static string VehicleNotFound =>
                     "Vehicle with the provided parameters was not found or its test records are not valid";
                 public static string BadRequest => "Invalid data in the request. Check your URL and parameters";

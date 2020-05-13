@@ -57,7 +57,7 @@ namespace DVSA.MOT.SDK.Services
                     return await _processApiResponse.GetData(parameters);
                 }
 
-                var responseMessage = Constants.LanguageStrings.SingleVehicleMotHistory.NullRegistrationException;
+                var responseMessage = Constants.LanguageStrings.SingleVehicleMotHistory.NullVehicleIdException;
                 _logger.Log(LogLevel.Error, responseMessage);
                 apiResponse.ResponseMessage = responseMessage;
                 return apiResponse;
