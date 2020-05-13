@@ -18,6 +18,11 @@ namespace DVSA.MOT.SDK.Services
             _processApiResponse = processApiResponse;
         }
 
+        /// <summary>
+        /// To request the MOT test history for registration
+        /// </summary>
+        /// <param name="registration">Registration of vehicle</param>
+        /// <returns>A single vehicles details and mot history</returns>
         public async Task<ApiResponse> GetSingleVehicleMotHistoryByRegistration(string registration)
         {
             try
@@ -43,6 +48,12 @@ namespace DVSA.MOT.SDK.Services
                 return null;
             }
         }
+
+        /// <summary>
+        /// To request the MOT test history by vehicle id
+        /// </summary>
+        /// <param name="id">Id of vehicle</param>
+        /// <returns>A single vehicles details and mot history</returns>
         public async Task<ApiResponse> GetSingleVehicleMotHistoryById(string id)
         {
             try

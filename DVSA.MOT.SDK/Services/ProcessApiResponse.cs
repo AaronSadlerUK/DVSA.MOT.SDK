@@ -23,6 +23,12 @@ namespace DVSA.MOT.SDK.Services
             _logger = logger;
             _apiKey = apiKey;
         }
+
+        /// <summary>
+        /// Returns an object containing the results from the database
+        /// </summary>
+        /// <param name="parameters">Query string parameters</param>
+        /// <returns></returns>
         public async Task<ApiResponse> GetData(List<KeyValuePair<string, string>> parameters)
         {
             var apiResponse = new ApiResponse();
@@ -49,6 +55,11 @@ namespace DVSA.MOT.SDK.Services
             }
         }
 
+        /// <summary>
+        /// Convert the json response to ApiResponse object
+        /// </summary>
+        /// <param name="httpContent">HttpClient response content</param>
+        /// <returns>ApiResponse object</returns>
         private async Task<List<VehicleDetails>> ConvertToObject(HttpContent httpContent)
         {
             try
@@ -70,6 +81,11 @@ namespace DVSA.MOT.SDK.Services
             }
         }
 
+        /// <summary>
+        /// Convert the status code response into a valid DVSA api response
+        /// </summary>
+        /// <param name="statusCode"></param>
+        /// <returns></returns>
         private string ResponseMessage(HttpStatusCode statusCode)
         {
             var responseMessage = string.Empty;
@@ -119,6 +135,11 @@ namespace DVSA.MOT.SDK.Services
             }
         }
 
+        /// <summary>
+        /// Generate a url with parameters for the HttpClient request
+        /// </summary>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         private static string GenerateUrl(IEnumerable<KeyValuePair<string, string>> parameters)
         {
             var baseURl = $"{Constants.ApiRootUrl}{Constants.ApiPath}";
