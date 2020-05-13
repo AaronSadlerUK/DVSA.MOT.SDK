@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace DVSA.MOT.SDK.Services
 {
-    public class ProcessApiResponse : IProcessApiResponse
+    internal class ProcessApiResponse : IProcessApiResponse
     {
         private readonly IOptions<ApiKey> _apiKey;
         private readonly ILogger<ProcessApiResponse> _logger;
