@@ -9,6 +9,7 @@
 
         public static class LanguageStrings
         {
+            public static string Ok => "Your request was serviced";
             public static string MissingApiKey => "The x-api-key is missing or invalid in the header";
             public static string IncorrectContentType => "The Content-Type is wrong in the header";
             public static string TooManyRequests => "You have exceeded your rate or quota";
