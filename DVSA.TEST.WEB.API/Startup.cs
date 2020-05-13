@@ -25,7 +25,7 @@ namespace DVSA.TEST.WEB.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.Configure<ApiKey>(Configuration.GetSection("MotApi"));
-            services.AddTransient<IMotTests, MotTests>();
+            services.AddTransient<ISingleVehicleService, SingleVehicleService>();
             services.AddOptions();
             services.AddLogging();
         }

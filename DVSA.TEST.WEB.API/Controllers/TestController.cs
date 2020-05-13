@@ -13,9 +13,9 @@ namespace DVSA.TEST.WEB.API.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        private readonly IMotTests _motTests;
+        private readonly ISingleVehicleService _motTests;
         private IOptions<ApiKey> _apiKey;
-        public TestController(IMotTests motTests, IOptions<ApiKey> apiKey)
+        public TestController(ISingleVehicleService motTests, IOptions<ApiKey> apiKey)
         {
             _motTests = motTests;
             _apiKey = apiKey;
