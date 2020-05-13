@@ -7,6 +7,6 @@ namespace DVSA.MOT.SDK.Interfaces
     public interface ISingleVehicleService
     {
         Task<ApiResponse> GetSingleVehicleMotHistoryByRegistration(string registration);
-        MotTestResponses GetSingleVehicleMotHistoryById(string id);
+        Task<ApiResponse> GetSingleVehicleMotHistoryById(string id);
     }
 }
