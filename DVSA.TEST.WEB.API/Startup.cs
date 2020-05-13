@@ -1,4 +1,5 @@
-﻿using DVSA.MOT.SDK.Interfaces;
+﻿using DVSA.MOT.SDK;
+using DVSA.MOT.SDK.Interfaces;
 using DVSA.MOT.SDK.Models;
 using DVSA.MOT.SDK.Services;
 using Microsoft.AspNetCore.Builder;
@@ -25,7 +26,7 @@ namespace DVSA.TEST.WEB.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.Configure<ApiKey>(Configuration.GetSection("MotApi"));
-            services.AddTransient<ISingleVehicleService, SingleVehicleService>();
+            services.AddDvlaMotSdk();
             services.AddOptions();
             services.AddLogging();
         }
