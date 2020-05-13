@@ -4,7 +4,7 @@ using DVSA.MOT.SDK.Models;
 
 namespace DVSA.MOT.SDK.Interfaces
 {
-    internal interface IProcessApiResponse
+    public interface IProcessApiResponse
     {
         Task<ApiResponse> GetData(List<KeyValuePair<string, string>> parameters);
     }
