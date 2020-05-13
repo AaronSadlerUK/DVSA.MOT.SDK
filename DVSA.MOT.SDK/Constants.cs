@@ -2,7 +2,7 @@
 
 namespace DVSA.MOT.SDK
 {
-    public static class Constants
+    internal static class Constants
     {
         public static string ApiRootUrl => "https://beta.check-mot.service.gov.uk/";
         public static string ApiPath => "trade/vehicles/mot-tests";
