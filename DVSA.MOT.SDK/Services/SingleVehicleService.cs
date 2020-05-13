@@ -120,15 +120,5 @@ namespace DVSA.MOT.SDK.Services
         {
             throw new NotImplementedException();
         }
-
-        public MotTestResponses GetAllMotTests(int page)
-        {
-            throw new NotImplementedException();
-        }
-
-        public MotTestResponses GetAllMotTestsByDate(DateTime date, int page)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

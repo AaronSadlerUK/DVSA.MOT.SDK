@@ -8,7 +8,5 @@ namespace DVSA.MOT.SDK.Interfaces
     {
         Task<ApiResponse> GetSingleVehicleMotHistoryByRegistration(string registration);
         MotTestResponses GetSingleVehicleMotHistoryById(string id);
-        MotTestResponses GetAllMotTests(int page);
-        MotTestResponses GetAllMotTestsByDate(DateTime date, int page);
     }
 }
