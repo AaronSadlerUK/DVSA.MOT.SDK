@@ -17,11 +17,12 @@ namespace DVSA.MOT.SDK.Services
     {
         private readonly IOptions<ApiKey> _apiKey;
         private readonly ILogger<ProcessApiResponse> _logger;
-
-        public ProcessApiResponse(ILogger<ProcessApiResponse> logger, IOptions<ApiKey> apiKey)
+        private readonly HttpClient _httpClient;
+        public ProcessApiResponse(ILogger<ProcessApiResponse> logger, IOptions<ApiKey> apiKey, HttpClient httpClient)
         {
             _logger = logger;
             _apiKey = apiKey;
+            _httpClient = httpClient;
         }
 
         /// <summary>
@@ -32,27 +33,24 @@ namespace DVSA.MOT.SDK.Services
         public async Task<ApiResponse> GetData(List<KeyValuePair<string, string>> parameters)
         {
             var apiResponse = new ApiResponse();
-            using (var httpClient = new HttpClient())
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue(Constants.ApiAcceptHeader));
+            _httpClient.DefaultRequestHeaders.Add(Constants.ApiKeyHeader, _apiKey.Value.DVSAApiKey);
+
+            var url = GenerateUrl(parameters);
+            var request = await _httpClient.GetAsync(url);
+            apiResponse.ReasonPhrase = request.ReasonPhrase;
+            apiResponse.StatusCode = (int)request.StatusCode;
+            var responseMessage = ResponseMessage(request.StatusCode);
+            apiResponse.ResponseMessage = responseMessage;
+            apiResponse.VehicleDetails = await ConvertToObject(request.Content);
+
+            if (!request.IsSuccessStatusCode)
             {
-                httpClient.DefaultRequestHeaders.Clear();
-                httpClient.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue(Constants.ApiAcceptHeader));
-                httpClient.DefaultRequestHeaders.Add(Constants.ApiKeyHeader, _apiKey.Value.DVSAApiKey);
-
-                var url = GenerateUrl(parameters);
-                var request = await httpClient.GetAsync(url);
-                apiResponse.ReasonPhrase = request.ReasonPhrase;
-                apiResponse.StatusCode = (int)request.StatusCode;
-                var responseMessage = ResponseMessage(request.StatusCode);
-                apiResponse.ResponseMessage = responseMessage;
-                apiResponse.VehicleDetails = await ConvertToObject(request.Content);
-
-                if (!request.IsSuccessStatusCode)
-                {
-                    _logger.Log(LogLevel.Error, responseMessage);
-                }
-                return apiResponse;
+                _logger.Log(LogLevel.Error, responseMessage);
             }
+            return apiResponse;
         }
 
         /// <summary>

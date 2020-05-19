@@ -8,9 +8,9 @@ namespace DVSA.MOT.SDK
     {
         public static IServiceCollection AddDvlaMotSdk(this IServiceCollection services)
         {
+            services.AddHttpClient<IProcessApiResponse, ProcessApiResponse>();
             services.AddScoped<ISingleVehicleService, SingleVehicleService>();
             services.AddScoped<IAllVehiclesService, AllVehiclesService>();
-            services.AddScoped<IProcessApiResponse, ProcessApiResponse>();
             return services;
         }
     }
