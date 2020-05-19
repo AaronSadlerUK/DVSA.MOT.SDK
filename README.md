@@ -1,3 +1,4 @@
+![nuget badge](https://img.shields.io/nuget/v/AjsWebDesign.DVSA.MOT.SDK)
 # DVSA.MOT.SDK
 
 A simple SDK for access to the [DVSA MOT history API](https://dvsa.github.io/mot-history-api-documentation/)
