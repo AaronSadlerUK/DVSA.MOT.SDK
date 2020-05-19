@@ -10,7 +10,7 @@
 	<releaseNotes><![CDATA[1.0.0 Initial release]]></releaseNotes>
 	<tags>dvsa, mot, mot-api, dvsa-api</tags>
 	<copyright>Copyright 2020</copyright>
-	<projectUrl>https://github.com/AaronSadlerUK/UmbracoForms.hCaptcha</projectUrl>
+	<projectUrl>https://github.com/AaronSadlerUK/DVSA.MOT.SDK</projectUrl>
 	<license type="expression">MIT</license>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>A simple SDK for access to the DVSA MOT history API.</summary>
