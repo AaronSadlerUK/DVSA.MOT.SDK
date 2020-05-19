@@ -23,6 +23,8 @@ Then you will then need to register the apikey and SDK in your `Startup.cs` file
 
       services.Configure<ApiKey>(Configuration.GetSection("MotApi"));
       services.AddDvlaMotSdk();
+      services.AddLogging();
+      services.AddControllers();
 
 
 ### Documentation
