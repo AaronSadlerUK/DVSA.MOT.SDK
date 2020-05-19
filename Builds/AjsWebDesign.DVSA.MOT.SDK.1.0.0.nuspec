@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AjsWebDesign.DVSA.MOT.SDK</id>
+    <version>1.0.0</version>
+    <title>DVSA.MOT.SDK</title>
+    <authors>Aaron Sadler</authors>
+    <owners>Aaron Sadler</owners>
+	<icon>MOT_logo.png</icon>
+	<releaseNotes><![CDATA[1.0.0 Initial release]]></releaseNotes>
+	<tags>dvsa, mot, mot-api, dvsa-api</tags>
+	<copyright>Copyright 2020</copyright>
+	<projectUrl>https://github.com/AaronSadlerUK/UmbracoForms.hCaptcha</projectUrl>
+	<license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>A simple SDK for access to the DVSA MOT history API.</summary>
+    <description>A simple SDK for access to the DVSA MOT history API.</description>
+		<dependencies>
+	  <group targetFramework=".NETStandard2.1">
+	  </group>
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="MOT_logo.png"/>
+    <file src="..\DVSA.MOT.SDK\bin\Release\netstandard2.1\DVSA.MOT.SDK.dll" target="lib\netstandard2.1\DVSA.MOT.SDK.dll" />
+  </files>
+</package>
