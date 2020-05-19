@@ -1,3 +1,4 @@
+![nuget badge](https://img.shields.io/nuget/v/AjsWebDesign.DVSA.MOT.SDK)
 # DVSA.MOT.SDK
 
 A simple SDK for access to the [DVSA MOT history API](https://dvsa.github.io/mot-history-api-documentation/)
@@ -6,7 +7,7 @@ A simple SDK for access to the [DVSA MOT history API](https://dvsa.github.io/mot
 
 To be able to use this SDK, you will require an Api Key, which you can apply for from the [DVSA](https://www.smartsurvey.co.uk/s/MOT_History_TradeAPI_Access_and_Support?).
 
-DVSA.MOT.SDK is available from [NuGet](#) or as a manual download directly from GitHub.
+DVSA.MOT.SDK is available from [NuGet](https://www.nuget.org/packages/AjsWebDesign.DVSA.MOT.SDK) or as a manual download directly from GitHub.
 
 ## Usage
 
@@ -23,6 +24,11 @@ Then you will then need to register the apikey and SDK in your `Startup.cs` file
       services.Configure<ApiKey>(Configuration.GetSection("MotApi"));
       services.AddDvlaMotSdk();
 
+
+### Documentation
+
+Documentation and examples on how the parameters are used to access the api can be found on the dvsa api history website:
+[https://dvsa.github.io/mot-history-api-documentation/](https://dvsa.github.io/mot-history-api-documentation/)
 
 ### Contribution guidelines
 
