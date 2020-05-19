@@ -6,7 +6,7 @@ A simple SDK for access to the [DVSA MOT history API](https://dvsa.github.io/mot
 
 To be able to use this SDK, you will require an Api Key, which you can apply for from the [DVSA](https://www.smartsurvey.co.uk/s/MOT_History_TradeAPI_Access_and_Support?).
 
-DVSA.MOT.SDK is available from [NuGet](#) or as a manual download directly from GitHub.
+DVSA.MOT.SDK is available from [NuGet](https://www.nuget.org/packages/AjsWebDesign.DVSA.MOT.SDK) or as a manual download directly from GitHub.
 
 ## Usage
 
