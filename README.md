@@ -25,6 +25,11 @@ Then you will then need to register the apikey and SDK in your `Startup.cs` file
       services.AddDvlaMotSdk();
 
 
+### Documentation
+
+Documentation on the parameters used to access the api can be found on the dvsa api history website:
+[https://dvsa.github.io/mot-history-api-documentation/](https://dvsa.github.io/mot-history-api-documentation/)
+
 ### Contribution guidelines
 
 To raise a new bug, create an issue on the GitHub repository. To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add ideas to the repository's issues list if you would to discuss anything related to the package.
