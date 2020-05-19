@@ -27,7 +27,7 @@ Then you will then need to register the apikey and SDK in your `Startup.cs` file
 
 ### Documentation
 
-Documentation on the parameters used to access the api can be found on the dvsa api history website:
+Documentation and examples on how the parameters are used to access the api can be found on the dvsa api history website:
 [https://dvsa.github.io/mot-history-api-documentation/](https://dvsa.github.io/mot-history-api-documentation/)
 
 ### Contribution guidelines
